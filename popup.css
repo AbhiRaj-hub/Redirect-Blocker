@@ -1,0 +1,12 @@
+:root { color-scheme: light dark; }
+body { width: 300px; margin: 0; font: 13px system-ui, sans-serif; }
+main { padding: 12px 14px; }
+h1 { font-size: 14px; margin: 0 0 8px; }
+#host { margin: 0 0 10px; font-weight: 600; word-break: break-all; }
+#toggle { width: 100%; padding: 10px; border: 0; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; color: #fff; background: #777; }
+#toggle[data-on="true"] { background: #188038; }
+#toggle[data-on="false"] { background: #b3261e; }
+#count { margin: 10px 0 4px; }
+#log { margin: 0 0 8px; padding-left: 16px; max-height: 140px; overflow: auto; font-size: 11px; opacity: .8; }
+#log li { word-break: break-all; }
+small { opacity: .6; }

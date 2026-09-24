@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Popup & Redirect Blocker",
+  "version": "0.1.0",
+  "description": "Blocks unwanted pop-ups and ad redirects, with a per-site on/off switch.",
+  "minimum_chrome_version": "111",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Popup & Redirect Blocker" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["main.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["bridge.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}
