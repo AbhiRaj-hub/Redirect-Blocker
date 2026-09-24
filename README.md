@@ -41,7 +41,6 @@ Requires Chromium 111+ (needed for content scripts running in the page's main wo
 | `bridge.js` | Runs in the isolated world. Relays per-site state and blocked events between the page and the extension |
 | `background.js` | Service worker. Stores disabled hosts, keeps per-tab counters, sets the badge |
 | `popup.html/css/js` | Toolbar popup UI |
-| `tests/test.html` | Local test page with BLOCK / ALLOW cases |
 
 **Decision logic (simplified)**
 
